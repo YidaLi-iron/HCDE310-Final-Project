@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{page_title}}</title>
+</head>
+<body>
+	<div class ='greeting'>{{greetings|safe}}</div>
+	{% for photo in photos%}
+<img src='{{photo.make_photo_url()}}' alt='{{photo.title}}'>
+{% endfor %}
+	<div class ='recommends'><h2>{{recommend|safe}}</h2></div>
+<p><a href='/'>Greet someone else?</a></p>
+</body>
+</html>
